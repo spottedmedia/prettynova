@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+%%Panel.HTMLHead%%
+<body>
+<div id="Container">
+	%%Panel.Header%%
+	<div id="Wrapper">
+		%%Panel.WrapperBanner%%
+		<div class="Content Widest" id="LayoutColumn1">			
+			%%Discount.FreeShippingEligibility%%
+            %%Panel.HomeSlideShow%%
+			%%Banner.TopBanner%%
+			%%Panel.HomeFeaturedProducts%%
+			%%Panel.HomeNewProducts%%
+			%%Panel.HomeRecentBlogs%%
+			%%Banner.BottomBanner%%
+		</div>
+		<br class="Clear" />
+	</div>
+	%%Panel.Footer%%
+</div>
+<script type="text/javascript" src="template/js/roster.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {	
+	jQuery('.ProductList').each(function(){
+		prev = $("<span>").addClass('slider_prev');
+		prev.appendTo($(this).parents('.BlockContent'));
+	  	next = $("<span>").addClass('slider_next')
+		next.appendTo($(this).parents('.BlockContent'));
+	  jQuery(this).rosterSlider({
+		items: 4,
+		next : prev,
+		prev : next,
+		auto : 3000,
+		scroll: {
+			items:1,
+			fx: "scroll",
+			easing: "swing",
+			duration: "700",
+			pauseOnHover: true
+		}
+	  });
+	});
+});
+</script>
+</body>
+</html>

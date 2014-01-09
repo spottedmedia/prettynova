@@ -1,0 +1,24 @@
+					%%GLOBAL_NewsletterBoxControlScript%%
+
+				<div class="Block NewsletterSubscription Moveable Panel" id="SideNewsletterBox">
+					%%GLOBAL_NewsletterHeaderOptimizerScriptTag%%
+					<h2>
+						%%LNG_OurNewsletter%%
+					</h2>
+					%%GLOBAL_NewsletterBoxOptimizerNoScriptTag%%
+
+					<div class="BlockContent">
+						<form action="%%GLOBAL_ShopPath%%/subscribe.php" method="post" id="subscribe_form" name="subscribe_form">
+							<input type="hidden" name="action" value="subscribe" />
+							<input type="text" class="Textbox" id="nl_first_name" name="nl_first_name" value="%%LNG_YourFirstName%%" onblur="if (this.value == '') {this.value = '%%LNG_YourFirstName%%';}" onfocus="if (this.value == '%%LNG_YourFirstName%%') {this.value = '';}" />
+							<input type="text" class="Textbox" id="nl_email" name="nl_email" value="%%LNG_YourEmailAddress%%" onblur="if (this.value == '') {this.value = '%%LNG_YourEmailAddress%%';}" onfocus="if (this.value == '%%LNG_YourEmailAddress%%') {this.value = '';}" /><br />
+							%%GLOBAL_NewsletterButtonOptimizerScriptTag%%
+								<input type="submit" value="%%LNG_Subscribe%%" class="Button" />
+							%%GLOBAL_NewsletterBoxOptimizerNoScriptTag%%
+						</form>
+					</div>
+                    <br class="Clear" />
+                    %%Panel.SocialLinks%%
+                    %%Panel.NewsletterJavaScript%%
+				</div>
+				

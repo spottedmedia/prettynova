@@ -1,0 +1,27 @@
+			<div id="SearchForm">
+				<form action="%%GLOBAL_ShopPath%%/search.php" method="get" id="HeaderSearchForm">
+					<label for="search_query">%%LNG_Search%%</label>
+					<input type="text" name="search_query" id="search_query" class="Textbox" onblur="if (this.value == '') {this.value = 'Search';}" onfocus="if (this.value == 'Search') {this.value = '';}" value="Search" />
+					<input type="submit" value="%%LNG_Go%%" class="Button" />
+				</form>
+				<p>
+					<a href="%%GLOBAL_ShopPathNormal%%/search.php?mode=advanced"><strong>%%LNG_AdvancedSearch%%</strong></a> |
+					<a href="%%GLOBAL_ShopPathNormal%%/search.php?action=Tips">%%LNG_SearchTips%%</a>
+				</p>
+			</div>
+
+			<script type="text/javascript">
+				var QuickSearchAlignment = 'left';
+				var QuickSearchWidth = '232px';
+				lang.EmptySmallSearch = "%%LNG_EmptySmallSearch%%";
+				$(function(){
+                    var search_str = "%%GLOBAL_OriginalSearchQuery%%";
+                    $("#search_query").val(search_str ? search_str : "Search");
+                    $("#HeaderSearchForm").submit(function(){
+                        if($("#search_query").val() == "" || $("#search_query").val() == 'Search'){
+                            $("#search_query").focus();
+                            return false;
+                        }
+                    });                    
+                });
+			</script>
